@@ -1,25 +1,30 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../static/css/styles.css">
+
 <header>
-    <div style="background-color: #F4F4F4; border-radius: 10px;">
-        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-            <div style="display: flex;">
-                <a href="/" style="display: flex; align-items: center;">
-                    <img src="../static/image/logo.webp" alt="logo" style="width: 50px;">
+    <div class="header-container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="/" class="logo-link">
+                    <img src="../static/image/logo.webp" alt="logo" class="logo-img">
                 </a>
-                <div style="border-left: 1px solid #F5A623; height: 50px; margin-left: 15px;"></div>
+                <div class="divider-left"></div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; width: 50%;">
-                <a href="/estimerbien">Estimer Bien</a>
-                <a href="/map">Map</a>
+            <div class="nav-links">
+                <a href="/estimerbien">Estimer un bien</a>
+                <a href="/map">Consulter des biens</a>
             </div>
 
-            <div style="display: flex;">
-                <div style="border-right: 1px solid #F5A623; height: 50px; margin-right: 15px;"></div>
-                <a href="/" style="display: flex; align-items: center;">
-                    <img src="../static/image/accueil.png" alt="accueil" style="width: 30px;">
+            <div class="accueil-container">
+                <div class="divider-right"></div>
+                <a href="/" class="accueil-link">
+                    <img src="../static/image/accueil.png" alt="accueil" class="accueil-img">
                 </a>
             </div>
-            
         </nav>
     </div>
 </header>
