@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimation de Bien à Bordeaux</title>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 95%;">
+        {% include 'header.html' %}
+    </div>
 
-    {% include 'header.html' %}
-
-    <div>
+    <div style="width: 100%;">
         <h2>Page d'accueil</h2>
         <p>Bienvenue sur notre plateforme d'estimation immobilière.</p>
     </div>
-    {% include 'footer.html' %}
+    
+    <div style="width: 100%; margin: 0px;">
+        {% include 'footer.html' %}
+    </div>
+    
 </body>
 </html>
