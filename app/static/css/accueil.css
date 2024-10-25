@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2A4D69; /* Setting the background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 545px;
+    border-radius: 8px;
+    margin: 30px;
+}
+
+/* Left Section */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* White background for the left section */
+    border-radius: 10px; /* Rounded corners for the left section */
+    padding: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 65%;
+    height: 545px;
+    margin-right: 30px;
+}
+
+.title {
+    background-color: #F5A623;
+; /* White background for the title */
+    color: #333; /* Dark text color */
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    grid-gap: 20px;
+    padding: 20px;
+    overflow-y: scroll;
+    scrollbar-color: #2A4D69 #F5F5F5;
+    scrollbar-width: thin;
+    height: 100%;
+}
+
+.grid-item {
+    background-color: white;
+    background-image: url("../image/maison.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    background-color: #F4F4F4; /* Background color for grid items */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.right-section {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Reduced padding to bring the block higher */
+    display: flex;
+    align-items: center; /* Align items to the top */
+    justify-content: center; /* Align to top left instead of center */
+    width: 35%;
+    height: 545px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+}
+
+.description {
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+    line-height: 1.9;
+    padding: 20px; /* Padding inside the description box */
+    width: 100%; /* Full width for the description */
+    height: 100%;
+}
+
+.description p {
+    margin-bottom: 15px;
+}
