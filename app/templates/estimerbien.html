@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Estimer un bien / tEstim</title>
-    <link rel="icon" href="../static/image/darkened_logo_testim.png" type="image/x-icon">
-
+    <title>Estimation d'un bien</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/estimerbien.css">
 </head>
-<body style="display: flex; flex-direction: column; align-items: center;">
-
+<body>
 
     <header>
         {% include 'header.html' %}
@@ -24,7 +22,6 @@
                     <label for="adresse">Adresse complète :</label>
                     <input type="text" id="adresse" name="adresse">
                 </div>
-
                 <div>
                     <label for="type_bien">Type de bien :</label>
                     <select id="type_bien" name="type_bien">
@@ -33,28 +30,22 @@
                         <option value="terrain">Terrain</option>
                     </select>
                 </div>
-
                 <div>
                     <label for="annee_construction">Année de construction :</label>
                     <input type="number" id="annee_construction" name="annee_construction">
                 </div>
-
-
                 <div>
                     <label for="superficie">Superficie (m²) :</label>
                     <input type="number" id="superficie" name="superficie">
                 </div>
-
                 <div>
                     <label for="nombre_pieces">Nombre de pièces :</label>
                     <input type="number" id="nombre_pieces" name="nombre_pieces">
                 </div>
-
                 <div>
                     <label for="nombre_etages">Nombre d’étages :</label>
                     <input type="number" id="nombre_etages" name="nombre_etages">
                 </div>
-
                 <div>
                     <label for="etat_general">État général :</label>
                     <select id="etat_general" name="etat_general">
@@ -63,7 +54,6 @@
                         <option value="a_renover">À rénover</option>
                     </select>
                 </div>
-
                 <div>
                     <label for="jardin_terrasse">Présence de jardin/terrasse :</label>
                     <select id="jardin_terrasse" name="jardin_terrasse">
@@ -71,7 +61,6 @@
                         <option value="non">Non</option>
                     </select>
                 </div>
-
                 <div>
                     <label for="garage_parking">Garage ou place de parking :</label>
                     <select id="garage_parking" name="garage_parking">
@@ -79,7 +68,6 @@
                         <option value="non">Non</option>
                     </select>
                 </div>
-
                 <div>
                     <label for="ascenseur">Ascenseur :</label>
                     <select id="ascenseur" name="ascenseur">
@@ -87,27 +75,22 @@
                         <option value="non">Non</option>
                     </select>
                 </div>
-
                 <div>
                     <label for="type_chauffage">Type de chauffage :</label>
                     <input type="text" id="type_chauffage" name="type_chauffage">
                 </div>
-
                 <div>
                     <label for="vue">Vue :</label>
                     <input type="text" id="vue" name="vue">
                 </div>
-
                 <div>
                     <label for="proximite">Proximité des commodités :</label>
                     <input type="text" id="proximite" name="proximite">
                 </div>
-
                 <div>
                     <label for="renovations">Rénovations récentes :</label>
                     <input type="text" id="renovations" name="renovations">
                 </div>
-
                 <button type="submit" class="submit-button">Envoyer</button>
             </form>
         </div>

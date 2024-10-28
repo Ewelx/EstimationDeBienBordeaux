@@ -1,86 +1,78 @@
+/* Styles de base pour la mise en page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
 
-        /* Image de fond couvrant toute la page */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('../static/image/logo.webp');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+header, footer {
+    background-color: #2A4D69;;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
-        /* Conteneur principal */
-        .container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+/* Centrage du formulaire */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #2A4D69;
+}
 
-        /* Conteneur du formulaire */
-        .form-container {
-            background: rgba(255, 255, 255, 0.8); 
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-        }
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
 
-        h2 {
-            text-align: center;
-            color: #333;
-        }
+h2 {
+    text-align: center;
+    color: #333;
+}
 
-        /* Style du formulaire en grille */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+/* Disposition en deux colonnes */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
-        /* Style des champs de formulaire */
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: inline-block;
-        }
+label {
+    font-weight: bold;
+}
 
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
-        /* Style du bouton d'envoi */
-        .submit-button {
-            grid-column: span 2; 
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            text-align: center;
-        }
+/* Bouton de soumission en pleine largeur */
+.submit-button {
+    grid-column: span 2; 
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        .submit-button:hover {
-            background-color: #45a049;
-        }
-
-        /* Positionnement fixe du header et du footer */
-        header, footer {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-        }
-    
+.submit-button:hover {
+    background-color: #45a049;
+}
