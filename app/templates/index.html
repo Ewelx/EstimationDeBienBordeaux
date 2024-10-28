@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimation de Bien à Bordeaux</title>
+    <title>Accueil / tEstim</title>
+    <link rel="icon" href="../static/image/darkened_logo_testim.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/accueil.css">
 </head>
-<body>
-
-    {% include 'header.html' %}
-
-    <div>
-        <h2>Page d'accueil</h2>
-        <p>Bienvenue sur notre plateforme d'estimation immobilière.</p>
+<body style="display: flex; flex-direction: column; align-items: center; margin: 0px;">
+    <div style="width: 95%; margin-top: 30px">
+        {% include 'header.html' %}
     </div>
-    {% include 'footer.html' %}
+
+    <div class="container">
+        <div class="left-section">
+            <div class="title">
+                Consulter les biens ajoutés récemment
+            </div>
+            
+            <div class="grid">
+                <div class="grid-item">Bien 1</div>
+                <div class="grid-item">Bien 2</div>
+                <div class="grid-item">Bien 3</div>
+                <div class="grid-item">Bien 4</div>
+                <div class="grid-item">Bien 5</div>
+                <div class="grid-item">Bien 6</div>
+                <div class="grid-item">Bien 7</div>
+                <div class="grid-item">Bien 8</div>
+                <div class="grid-item">Bien 9</div>
+            </div>
+        </div>
+    
+        <div class="right-section">
+            <div class="description">
+                <p>Bienvenue sur notre site, où vos rêves immobiliers deviennent réalité (ou presque !).</p>
+                <p>Parce que trouver le bon bien, c'est comme tomber amoureux : un coup de foudre inattendu ! Explorez, cliquez, rêvez... et laissez-nous vous aider à découvrir votre prochaine maison idéale !</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="width: 100%; margin: 0px;">
+        {% include 'footer.html' %}
+    </div>
+    
 </body>
 </html>

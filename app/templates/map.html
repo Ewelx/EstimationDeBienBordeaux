@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimation de Bien à Bordeaux</title>
+    <title>Consulter des biens / tEstim</title>
+    <link rel="icon" href="../static/image/darkened_logo_testim.png" type="image/x-icon">
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center;">
 
-    {% include 'header.html' %}
-
-    <div>
-        <h2>Map</h2>
-        
+    <div style="width: 95%; margin-top: 1%;">
+        {% include 'header.html' %}
     </div>
-    {% include 'footer.html' %}
+
+    <div style="width: 100%;">
+        <h2>Map</h2>
+    </div>
+        
+    <div style="width: 100%; margin: 0px;">
+        {% include 'footer.html' %}
+    </div>
 </body>
 </html>
