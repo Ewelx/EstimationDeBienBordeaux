@@ -3,14 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation d'un bien</title>
+    <style>
+        /* Image de fond couvrant toute la page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../static/image/logo.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Conteneur principal */
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Conteneur du formulaire */
+        .form-container {
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Style du formulaire en grille */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Style des champs de formulaire */
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Style du bouton d'envoi */
+        .submit-button {
+            grid-column: span 2; 
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Positionnement fixe du header et du footer */
+        header, footer {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
-    {% include 'header.html' %}
+    <header>
+        {% include 'header.html' %}
+    </header>
 
-    <div>
-        <h2>Estimation d'un bien</h2>
+    <div class="container">
+        <div class="form-container">
+            <h2>Formulaire d'estimation</h2>
+
+            <form method="post" class="form-grid"> 
+                <div>
+                    <label for="adresse">Adresse complète :</label>
+                    <input type="text" id="adresse" name="adresse">
+                </div>
+
+                <div>
+                    <label for="type_bien">Type de bien :</label>
+                    <select id="type_bien" name="type_bien">
+                        <option value="maison">Maison</option>
+                        <option value="appartement">Appartement</option>
+                        <option value="terrain">Terrain</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="annee_construction">Année de construction :</label>
+                    <input type="number" id="annee_construction" name="annee_construction">
+                </div>
+
+                <div>
+                    <label for="superficie">Superficie (m²) :</label>
+                    <input type="number" id="superficie" name="superficie">
+                </div>
+
+                <div>
+                    <label for="nombre_pieces">Nombre de pièces :</label>
+                    <input type="number" id="nombre_pieces" name="nombre_pieces">
+                </div>
+
+                <div>
+                    <label for="nombre_etages">Nombre d’étages :</label>
+                    <input type="number" id="nombre_etages" name="nombre_etages">
+                </div>
+
+                <div>
+                    <label for="etat_general">État général :</label>
+                    <select id="etat_general" name="etat_general">
+                        <option value="neuf">Neuf</option>
+                        <option value="bon">Bon</option>
+                        <option value="a_renover">À rénover</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="jardin_terrasse">Présence de jardin/terrasse :</label>
+                    <select id="jardin_terrasse" name="jardin_terrasse">
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="garage_parking">Garage ou place de parking :</label>
+                    <select id="garage_parking" name="garage_parking">
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ascenseur">Ascenseur :</label>
+                    <select id="ascenseur" name="ascenseur">
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="type_chauffage">Type de chauffage :</label>
+                    <input type="text" id="type_chauffage" name="type_chauffage">
+                </div>
+
+                <div>
+                    <label for="vue">Vue :</label>
+                    <input type="text" id="vue" name="vue">
+                </div>
+
+                <div>
+                    <label for="proximite">Proximité des commodités :</label>
+                    <input type="text" id="proximite" name="proximite">
+                </div>
+
+                <div>
+                    <label for="renovations">Rénovations récentes :</label>
+                    <input type="text" id="renovations" name="renovations">
+                </div>
+
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
+        </div>
     </div>
-    {% include 'footer.html' %}
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+
 </body>
 </html>
