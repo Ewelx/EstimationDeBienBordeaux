@@ -21,10 +21,12 @@
         }
     </style>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center;">
 
-    {% include 'header.html' %}
-
+    <div style="width: 95%; margin-top: 1%;">
+        {% include 'header.html' %}
+    </div>
+  
     <h2>Carte interactive de Bordeaux</h2>
     <div id="map"></div> <!-- Conteneur de la carte -->
 
