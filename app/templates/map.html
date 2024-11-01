@@ -4,15 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimation de Bien à Bordeaux</title>
+
+    <!-- Inclure le CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <style>
+        #map {
+            width: 800px;  
+            height: 500px; 
+            margin: 0 auto; 
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
 
     {% include 'header.html' %}
 
-    <div>
-        <h2>Map</h2>
-        
-    </div>
+    <h2>Carte interactive de Bordeaux</h2>
+    <div id="map"></div> <!-- Conteneur de la carte -->
+
+    <!-- Inclusion du script JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <script>
+        // Initialisation de la carte centrée sur Bordeaux
+        var map = L.map('map').setView([44.8378, -0.5792], 13);
+
+        // Ajouter les tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Charger les données JSON contenant les villes et leurs coordonnées
+        Papa.parse('static/CSV/communes_filtres.csv', {
+            header: true,
+            download: true,
+            complete: function(results) {
+                results.data.forEach(city => {
+                    // Vérifier que les coordonnées existent
+                    if (city.LATITUDE != "Null" && city.LONGITUDE != "Null") {
+                        // Créer un marqueur pour chaque ville
+                        var marker = L.marker([parseFloat(city.LATITUDE), parseFloat(city.LONGITUDE)]).addTo(map);
+                        // Ajouter un popup avec le nom de la ville
+                        marker.bindPopup(`<b>${city.NOM_COM_M} : ${city.PrixMoyen_M2}/m²</b>`);
+                    }
+                });
+            },
+            error: function(error) {
+                console.error("Erreur lors du chargement du CSV :", error);
+            }
+        });
+    </script>
+    <br/>
     {% include 'footer.html' %}
 </body>
 </html>
