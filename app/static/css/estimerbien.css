@@ -76,3 +76,38 @@ select {
 .submit-button:hover {
     background-color: #45a049;
 }
+
+.modal {
+    display: none; /* Cacher par défaut */
+    position: fixed; /* Rester en place */
+    z-index: 1; /* Au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur de la fenêtre */
+    height: 100%; /* Hauteur de la fenêtre */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgb(0,0,0); /* Couleur de fond */
+    background-color: rgba(0,0,0,0.4); /* Couleur de fond avec transparence */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% depuis le haut et centré */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la modale */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
