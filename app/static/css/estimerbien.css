@@ -83,7 +83,7 @@ select {
 #reponse {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 64%;
     height: fit-content;
     background-color: #f4f4f4;
     border-radius: 8px;
