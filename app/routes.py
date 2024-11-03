@@ -95,7 +95,6 @@ def algorithme_estimation_bien(ville, type_bien, annee_construction, superficie,
         prix_base *= 1.1
     
     prix_estime = int(superficie) * prix_base
-    print(prix_estime)
     return prix_estime
 
 # Définir une route pour la page d'accueil
@@ -132,7 +131,7 @@ def estimerbien():
         )
 
         return render_template('estimerbien.html', villes=villes, prix_estime=int(prix_estime))
-    return render_template('estimerbien.html', villes=villes)
+    return render_template('estimerbien.html', villes=villes, prix_estime=None)
 
 # Définir une route pour la page map
 @main_bp.route('/map')
