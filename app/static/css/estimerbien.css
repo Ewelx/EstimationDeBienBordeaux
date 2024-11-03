@@ -2,30 +2,32 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-}
-
-header, footer {
-    background-color: #2A4D69;;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Centrage du formulaire */
 .container {
+    background-image: url("../image/maison.jpg");
+    filter:grayscale(20%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-grow: 1;
-    padding: 20px;
-    background-color: #2A4D69;
+    width: 95%;
+    font-family: "Roboto", sans-serif;
 }
 
 .form-container {
+    margin: 30px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -37,6 +39,7 @@ header, footer {
 h2 {
     text-align: center;
     color: #333;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Disposition en deux colonnes */
@@ -77,37 +80,24 @@ select {
     background-color: #45a049;
 }
 
-.modal {
-    display: none; /* Cacher par défaut */
-    position: fixed; /* Rester en place */
-    z-index: 1; /* Au-dessus des autres éléments */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largeur de la fenêtre */
-    height: 100%; /* Hauteur de la fenêtre */
-    overflow: auto; /* Activer le défilement si nécessaire */
-    background-color: rgb(0,0,0); /* Couleur de fond */
-    background-color: rgba(0,0,0,0.4); /* Couleur de fond avec transparence */
+#reponse {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: fit-content;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% depuis le haut et centré */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Largeur de la modale */
+#estimationResult {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+h3 {
+    margin: 10px;
+    font-family: "Roboto", sans-serif;
 }
